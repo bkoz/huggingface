@@ -41,5 +41,5 @@ commands:
       group:
         kind: run
       label: Configure python
-      workingDir: ${PROJECTS_ROOT}/devspaces-gpu
+      workingDir: ${PROJECTS_ROOT}/huggingface
     id: run

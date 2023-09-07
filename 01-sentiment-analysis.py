@@ -1,9 +1,11 @@
 from transformers import pipeline
+import gradio as gr
 
 classifier = pipeline("sentiment-analysis")
-classifier(
-    [
-        "I've been waiting for a HuggingFace course my whole life.",
-        "I hate this so much!",
-    ]
-)
+
+def predict(prompt):
+    return classifier([prompt])
+
+examples = ["The book was well written with an exciting plot."]
+demo = gr.Interface(fn=predict, inputs="text", outputs="text", examples=examples)
+demo.launch()

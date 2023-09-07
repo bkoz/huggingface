@@ -1,8 +1,19 @@
+"""
+A simple HuggingFace/Gradio program.
+"""
+
 from transformers import pipeline
 import gradio as gr
 
 
-def predict(prompt):
+def predict(prompt: list) -> list:
+    """Predict the sentiment
+    Args:
+        prompt (list): A list of prompts as inputs.
+
+    Returns:
+        list: A list positive or negative sentiments and their probabilities.
+    """
     return classifier([prompt])
 
 if __name__ == "__main__":

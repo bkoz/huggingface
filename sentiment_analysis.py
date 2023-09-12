@@ -6,13 +6,13 @@ from transformers import pipeline
 import gradio as gr
 
 
-def predict(prompt: list) -> list:
+def predict(prompt: str) -> list:
     """Predict the sentiment
     Args:
-        prompt (list): A list of prompts as inputs.
+        prompt (str): The input prompt.
 
     Returns:
-        list: A list positive or negative sentiments and their probabilities.
+        list: A list of positive or negative sentiments and their probabilities.
     """
     return classifier([prompt])
 

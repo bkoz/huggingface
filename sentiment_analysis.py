@@ -20,6 +20,6 @@ if __name__ == "__main__":
 
     classifier = pipeline("sentiment-analysis")
 
-    examples = ["The book was well written with an exciting plot."]
+    examples = ["The book was well written with an exciting plot.", "I could barely stay awake as I read the first chapter."]
     demo = gr.Interface(fn=predict, inputs="text", outputs="text", examples=examples)
     demo.launch()

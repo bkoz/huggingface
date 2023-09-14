@@ -6,5 +6,5 @@
 - Run the task to create a new Python virtual environment:
   - View => Command Pallette => run task => devfile => Configure Python.
   - Add the Microsoft Itellisense (Pylance) extension for Python to vscode.
-  - Open the example Gradio Python client and run it.
+  - Open the example `sentiment-analysis.py` client and run it.
   - A dialog should appear to port-forward port 7860.

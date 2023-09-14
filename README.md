@@ -1,5 +1,6 @@
 # Experiment with HuggingFace in Openshift DevSpaces
 
+- Create a [Red Hat Developer Sandbox](https://developers.redhat.com)
 - Login to Openshift and open the DevSpaces Dashboard.
 - Create a new workspace by importing this repo.
 - Run the task to create a new Python environment:

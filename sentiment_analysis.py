@@ -16,10 +16,13 @@ def predict(prompt: str) -> list:
     """
     return classifier([prompt])
 
-if __name__ == "__main__":
 
+if __name__ == "__main__":
     classifier = pipeline("sentiment-analysis")
 
-    examples = ["The book was well written with an exciting plot.", "I could barely stay awake as I read the first chapter."]
+    examples = [
+        "The book was well written with an exciting plot.",
+        "I could barely stay awake as I read the first chapter.",
+    ]
     demo = gr.Interface(fn=predict, inputs="text", outputs="text", examples=examples)
     demo.launch()

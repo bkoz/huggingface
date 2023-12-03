@@ -25,4 +25,4 @@ if __name__ == "__main__":
         "I could barely stay awake as I read the first chapter.",
     ]
     demo = gr.Interface(fn=predict, inputs="text", outputs="text", examples=examples)
-    demo.launch()
+    demo.launch(server_name="0.0.0.0", server_port=8080, share=False)

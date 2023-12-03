@@ -13,11 +13,11 @@ lint:
 	#lint Dockerfile
 	#docker run --rm -i hadolint/hadolint < Dockerfile
 
-deploy:
+build:
 	#push to ECR for deploy
-	aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 123456.dkr.ecr.us-east-1.amazonaws.com
-	docker build -t mlops .
-	docker tag mlops:latest 123456.dkr.ecr.us-east-1.amazonaws.com/mlops:latest
-	docker push 123456.dkr.ecr.us-east-1.amazonaws.com/mlops:latest
-	
-all: install lint test format deploy
+	docker build -t pyexample .
+	docker tag pyexample:latest quay.io/bkozdemb/pyexample:latest
+	docker login quay.io
+	docker push quay.io/bkozdemb/pyexample:latest
+
+all: install lint test format build
